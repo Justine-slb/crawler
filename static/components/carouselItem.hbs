@@ -1,0 +1,15 @@
+{{#if current}}
+    <div class="card{{position}} current" onclick="changeCarousel('{{parameter}}',{{position}})">
+{{else}}
+    <div class="card{{position}}" onclick="changeCarousel('{{parameter}}',{{position}})">
+{{/if}}
+    <div class="infoBox">
+        <p class="number">{{element.classement}}</p>
+        <a class="top10_link" href={{element.link}}>Watch Now</a>
+    </div>
+    <div class="img_box_top10">
+        <span class="smallNumber">{{element.classement}}</span>
+        <span class="title">{{element.title}}</span>
+        <img src={{element.img}} alt='{{element.title}}'>
+    </div>
+</div>

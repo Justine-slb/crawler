@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Crawflix</title>
+        <meta name="description" content="This page contain the top 10 for movie and show for the last week.">
+        <meta name="keywords" content="netflix,news,shows,movies,upcoming,latest,crawflix,crawler,quitting,leaving,actualities,top 10"/>
+        <meta name="theme-color" content="#D60002"/>
+        <link rel="stylesheet" href="css/top10.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    </head>
+    <body>
+        {{> header}}
+        <section class="mainContent">
+            <div class="title">
+                <div id="title_top10_ju"><h1>TOP 10</h1></div>
+                <div class="select">
+                    <form action="/Top10" method="get" class="form">
+                        <select onchange="this.parentNode.submit()" name="country">
+                            {{#each country}}
+                                <option value="{{this}}">{{toUppercase this}}</option>
+                            {{/each}}
+                        </select>
+                        <i class="bi bi-caret-down-fill arrow" id="{{country.[0]}}"></i>
+                    </form>
+
+                </div>
+
+            {{#with top10}}
+                <div><h2>{{date}}</h2></div>
+            </div>
+            <div id="all_carousel">
+            <div class="carousel_section">
+                <h3 id="movie" class="carousel_name">MOVIES</h3>
+                <div class="carousel-movie">
+                    {{#with topTenMovie}}
+                        {{> carousel parameter="movie" current=../../currentmovieCarousel}}
+                    {{/with}}
+                </div>
+            </div>
+            <div class="carousel_section">
+                <h3 id="serie" class="carousel_name">SERIES</h3>
+                <div class="carousel-serie">
+                    {{#with topTenSerie}}
+                        {{> carousel parameter="serie" current=../../currentserieCarousel}}
+                    {{/with}}
+                </div>
+            </div>
+
+            {{/with}}
+        </div>
+        </section>
+        <script src="../js/changeCarousel.js"></script>
+        {{> footer}}
+    </body>
+</html>

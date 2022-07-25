@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Crawflix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="In this page you will be able to see all the actualities about netflix.">
+    <meta name="keywords" content="netflix,news,shows,movies,upcoming,latest,crawflix,crawler,quitting,leaving,actualities,top 10"/>
+    <meta name="theme-color" content="#D60002"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/news.css">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+</head>
+<body>
+{{> header}}
+<section id="Title_page">
+    <div id ="title_news_page_box">
+        <img id ="logo_netflix" src="img/logo-netflix.png" alt="netflix logo">
+        <p>All news about your favorite streaming plateform</p>
+    </div>
+</section>
+
+<section id="container_top_overview">
+    <div class="part_title">
+        <h2 class="subtitle">TOP<br>ACTUALITIES</h2>
+    </div>
+    <div class="container_background">
+        <div class="mega_box_overview">
+            <div class="box_top_overview">
+                <div class="image_container" style="width:100%; height:auto"><img class="img_new" src="img/upcoming_news.jpg" style="width:100%; height: 250px; object-fit: contain" alt="netflix home page">
+                </div>
+                <div class="box_content_news">
+                    <h2 class="title_overview">Up coming</h2>
+                    <span><p class="content_news">
+                    Discover the upcoming movies and series on Netflix.
+                    Don't miss anything!
+                </p></span>
+                    <div class="box_link_news"><a class="link_news2" href="/UpComing">Read →</a></div>
+                </div>
+            </div>
+
+            <div class="box_top_overview">
+                <div class="image_container" style="width:100%; height: auto"><img class="img_new" src="img/pixar.png"
+                                                                        alt="shrek image"   style="width:100%; height: 250px">
+                </div>
+                <div class="box_content_news">
+                    <span><h2 class="title_overview">Last chance</h2></span>
+                    <span><p class="content_news">
+                    All movies and series leaving the platform next month.
+                    Don't miss it.
+                </p></span>
+                    <div class="box_link_news"><a class="link_news2" href="/LastChance">Read →</a></div>
+
+                </div>
+            </div>
+
+            <div class="box_top_overview">
+                <div class="image_container" style="width:100%; height:auto"><img class="img_new"
+                                                alt="Top 10 image"              src="https://dnm.nflximg.net/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTLjoxSnud-PECgpNIZIWlBmgm0HK2ocoBmhWw8hL2DnDjbK0ep5anctYTonRNxzzQVag7TqGsGulD-lbUVnL8zvMJ-QC6TuIHwk8g9wXJEP9FayEEfJQvg56SQFeA.jpg?r=8d0"
+                                                                                  style="width:100%; height: 250px">
+                </div>
+                <div class="box_content_news">
+                    <span><h2 class="title_overview">Top 10</h2></span>
+                    <span><p class="content_news">
+                    Discover the week top 10 France for movies and series.
+                    You can be surprise!
+                </p></span>
+                    <div class="box_link_news"><a class="link_news2" href="/Top10">Read →</a></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="container_other_news">
+    <div class="part_title">
+        <h2 class="subtitle">OTHERS<br>ACTUALITIES</h2>
+    </div>
+    <div class="mega_box_news">
+        {{#each newsNetflix}}
+            <div class="news_box">
+                <span class="img_box"><img src="{{img}}" alt="Article img"></span>
+                <span class="content_box">
+                        <p class="date">{{date}}</p>
+                        <p class="extract">{{content}}</p>
+                        <div class="box_link_news2"><a href="{{link}}"
+                                                       class="link_news2">Read →</a></div>
+                    </span>
+            </div>
+        {{/each}}
+    </div>
+</section>
+{{> footer}}
+</body>
+</html>

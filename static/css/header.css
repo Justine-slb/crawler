@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100&display=swap');
+
+body {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    min-height: 3.5rem;
+    height: auto;
+    text-align: right;
+    top: 0;
+    position: fixed;
+    margin: 0;
+    z-index: 90;
+}
+
+header nav {
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%,rgba(70,70,71,1) 100%);
+    width: 100%;
+    min-height: 4rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: auto;
+    position: absolute;
+    top: -8px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    border-bottom:solid 1px var(--main-color);
+    border-radius: 0 0 25px 0;
+    border-bottom:solid 1px #CE0202;
+}
+
+.logo {
+    margin-top: 0.6rem;
+    margin-left: 1rem;
+    font-size: 5.4vmin;
+    float: left;
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    letter-spacing: 2px;
+    font-weight: lighter;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.logo_robot {
+    width: auto;
+    height: auto;
+    float: left;
+    margin-top: 1rem;
+    margin-left: 2vmin;
+}
+
+.nav-link-section {
+    width: 100%;
+    float: right;
+    height: auto;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.nav-link {
+    width: 100%;
+    font-size: 2.5vmin;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    transition: color 0.5s ease-out;
+    font-weight: lighter;
+}
+
+.nav-link:hover {
+    color: var(--main-color);
+    font-weight: bolder;
+}
+
+.toggle1, #toggle, .toggle2 {
+    display: none;
+    width: 90%;
+}
+.toggle1:hover, #toggle:hover, .toggle2:hover {
+    color: var(--main-color);
+}
+
+
+@media all and (max-width: 800px) {
+    header nav {
+        display: block;
+        background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%,rgba(70,70,71,1) 100%);;
+        height: max-content;
+        justify-content: center;
+    }
+
+    .toggle1 {
+        width: 40px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        float: right;
+        margin-right: 2vmin;
+        margin-top: 1vmin;
+    }
+
+    .nav-link-section {
+        display: none;
+        flex-direction: column;
+        padding-bottom: 0.5rem;
+    }
+
+    .nav-link {
+        text-align: center;
+        font-size: 20px;
+        margin: 0 auto;
+        padding : 5px;
+        font-weight: lighter;
+    }
+
+    .logo {
+        font-size: 40px;
+    }
+
+    #toggle:checked + .nav-link-section{
+        display: flex;
+    }
+}

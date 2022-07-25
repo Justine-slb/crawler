@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import "header.css";
+@import "footer.css";
+@import "carousel.css";
+
+
+body {
+    --bg-color: #141414;
+    --main-color : #D60002;
+    background-color: var(--bg-color);
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+h1,h2,h3 {
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+}
+
+h1 {
+    position: relative;
+    font-size: 5vmax;
+    text-align: center;
+    margin: 0;
+}
+
+h2 {
+    /*position: relative;*/
+    font-size: 1.8vw;
+    text-align: center;
+}
+.carousel_name{
+margin-bottom: 3vmax;
+}
+
+form {
+    display: inline;
+    text-align: center;
+}
+
+#title_top10_ju {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.title {
+    position: relative;
+    top: 5rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.select {
+    text-align: center;
+    top: -1%;
+}
+
+select {
+    font-family: 'Bebas Neue', cursive;
+    color: var(--main-color);
+    font-size: 4.2vmax;
+    background-color: transparent;
+    border: none;
+    appearance: none;
+    z-index: 2;
+    width: 130%;
+    margin-left: -15%;
+    border-bottom: solid 1px #CE0202;
+    cursor: pointer;
+    text-align: center;
+}
+
+select:focus {
+    outline: none;
+}
+
+option {
+    background-color: var(--bg-color);
+    font-size: 2vmax;
+}
+
+.arrow {
+    color: var(--main-color);
+    font-size: 2vw;
+    float: right;
+    margin-right: -13%;;
+    margin-top: -15%;
+    z-index: -2;
+    position: relative;
+}
+
+.carousel_name{
+    position: relative;
+    left: 4%;
+    font-size: 4vw;
+    letter-spacing: 2px;
+}
+#movie {
+    top: 2%;
+}
+
+.carousel-movie {
+    position: relative;
+    width: 95%;
+    height: 25vmax;
+    margin: 0 auto;
+
+}
+
+.carousel-serie {
+    position: relative;
+    width: 95%;
+    height: 25vmax;
+    margin: 0 auto;
+}
+
+#all_carousel {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 5rem;
+}
+
+.carousel_section{
+    height: fit-content;
+    padding-bottom: 5rem;
+    margin-left: 2vmax;
+    border-bottom: solid 1px #CE0202;
+}
+
+.footer {
+    bottom: 0%;
+}

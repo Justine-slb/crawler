@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300&display=swap');
+@import "header.css";
+@import "footer.css";
+
+body{
+    --bg-color: #141414;
+    --main-color : #D60002;
+    --white-color : #f1f1f1;
+    --black-color : #141414;
+    --main-redcolor : #CE0202;
+    --main-purplecolor : #C656D6;
+    --main-greycolor: #26272b;
+    --boxshadow : rgba(0, 0, 0, 0.17) 0 -23px 25px 0 inset, rgba(0, 0, 0, 0.15) 0 -36px 30px 0 inset, rgba(0, 0, 0, 0.1) 0 -19px 20px 0 inset, rgba(0, 0, 0, 0.06) 0 2px 1px, rgba(0, 0, 0, 0.09) 0 4px 2px, rgba(0, 0, 0, 0.09) 0 8px 4px, rgba(0, 0, 0, 0.09) 0 16px 5px, rgba(0, 0, 0, 0.09) 0 16px 5px;
+    --buttonshadow: 1px 4px 29px -3px rgba(0,0,0,0.69);
+    --textshadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}

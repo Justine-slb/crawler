@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+/* Main element */
+
+footer {
+    position: absolute;
+    left: 0;
+    background-color: var(--bg-color);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+    grid-template-rows: 100%;
+    border-radius: 0 15px 0 0;
+
+}
+
+/* Nav Links */
+
+footer nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 25%;
+    margin: auto;
+    gap: 50px;
+    z-index: 30;
+
+}
+
+footer nav ul li {
+    list-style-type: none;
+}
+
+footer nav ul li a {
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+    text-decoration: none;
+    font-size: 2vw;
+    transition: color 0.5s ease-out;
+}
+
+footer nav ul li a:hover {
+    color: var(--main-color)
+}
+
+/* Logos */
+
+#logoYnov {
+    width: 90%;
+    top: 10%;
+    position: relative;
+}
+
+.logoMedia {
+    display: flex;
+    justify-content: space-evenly;
+    grid-column: 3/4;
+}
+
+.logoMedia i {
+    position: relative;
+    top: 30%;
+    font-size: 3vw;
+    transition: color 0.5s ease-out;
+    color: white;
+}
+
+.logoMedia i:hover {
+    color: var(--main-color);
+}

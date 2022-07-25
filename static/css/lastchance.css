@@ -1,0 +1,153 @@
+@import "header.css";
+@import "footer.css";
+@import "turn_back_button.css";
+
+body{
+    --bg-color: #141414;
+    --main-color : #D60002;
+    background-image: url("https://about.netflix.com/images/backgrounds/background-texture-s.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer {
+    height: 15%;
+    bottom: -24%;
+}
+
+footer.opened {
+    bottom: unset;
+}
+
+h1 {
+    font-weight: bolder;
+    margin-top:0.5rem;
+    margin-left: 10%;
+    font-size: 2.8vmax;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 3px 3px 8px rgb(0 0 0);
+}
+
+.mainContent {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    height: 78%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.mainContent.opened {
+    top: 10%;
+    display: initial;
+}
+
+.leavingCard {
+    object-fit: contain;
+    margin-left: 20%;
+    margin-bottom: 3rem;
+    width: 60%;
+    height: auto;
+    background: white;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.leavingCard .infoBox {
+    box-shadow: rgb(0 0 0 / 17%) 0px -15px 10px 0px inset, rgb(0 0 0 / 15%) 0px -20px 15px 0px inset, rgb(0 0 0 / 10%) 0px -50px 40px 0px inset, rgb(0 0 0 / 6%) 0px 2px 1px, rgb(0 0 0 / 9%) 0px 4px 2px, rgb(0 0 0 / 9%) 0px 8px 4px, rgb(0 0 0 / 9%) 0px 16px 8px, rgb(0 0 0 / 9%) 0px 32px 16px;
+}
+
+.leavingCard img {
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+
+.leavingCard .infoBox .date {
+    font-family: 'Bebas Neue', sans-serif;
+    color: black;
+    text-align: center;
+    font-size: 2vmax;
+    margin: 0;
+    margin-top: 1vmax;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 80%);
+}
+
+.leavingCard .infoBox .buttonBox {
+    text-align: center;
+}
+
+.leavingCard .infoBox .button {
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease-out;
+    margin: 1rem;
+    margin-top: 2rem;
+    font-size: 1vmax;
+    padding: 0.5rem;
+    color: white;
+    background: #CE0202;
+    box-shadow: rgb(0 0 0 / 17%) 0px -15px 10px 0px inset, rgb(0 0 0 / 15%) 0px -20px 15px 0px inset, rgb(0 0 0 / 10%) 0px -50px 40px 0px inset, rgb(0 0 0 / 6%) 0px 2px 1px, rgb(0 0 0 / 9%) 0px 4px 2px, rgb(0 0 0 / 9%) 0px 8px 4px, rgb(0 0 0 / 9%) 0px 16px 8px, rgb(0 0 0 / 9%) 0px 32px 16px;
+}
+
+.leavingCard .infoBox .button:hover{
+    font-weight: bolder;
+    padding: 0.6rem;
+}
+
+.leavingCard .listBox {
+    height: 0;
+    opacity: 0;
+    width: 330%;
+    background: var(--bg-color);
+    box-shadow: rgb(0 0 0 / 17%) 0px -15px 10px 0px inset, rgb(0 0 0 / 15%) 0px -20px 15px 0px inset, rgb(0 0 0 / 10%) 0px -50px 40px 0px inset, rgb(0 0 0 / 6%) 0px 2px 1px, rgb(0 0 0 / 9%) 0px 4px 2px, rgb(0 0 0 / 9%) 0px 8px 4px, rgb(0 0 0 / 9%) 0px 16px 8px, rgb(0 0 0 / 9%) 0px 32px 16px;
+    border-left: inset 7px var(--main-color);
+}
+
+.leavingCard ul li {
+    height: 0;
+    transition: all 0.3s ease-out;
+    font-weight: bold;
+}
+
+.leavingCard.opened .listBox {
+    height: 100%;
+    opacity: 1;
+}
+
+.leavingCard.opened ul {
+    padding-left: 15%;
+}
+
+.leavingCard.opened ul li {
+    padding-left: 2%;
+    height: 1.5%;
+    font-family: 'Poppins', sans-serif;
+    color: #f1f1f1;
+}
+
+.leavingCard.opened li + li {
+    padding-top: 0.2rem;
+  }
+  
+@media all and (max-width: 700px) {
+    #turn_back {
+    margin-top: 12vmax;
+    }
+    .leavingCard img {
+        display: none;
+    }
+    .leavingCard .infoBox {
+        width: 145%;
+        right: 45%;
+        position: relative;
+    }
+  }

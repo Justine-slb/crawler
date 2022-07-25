@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Main element */
+body {
+    --white-color: #f1f1f1;
+    --main-redcolor : #CE0202;
+    --buttonshadow: 1px 4px 29px -3px rgba(0,0,0,0.69);
+    --background-color: #111819;
+    color: var(--white-color);
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+h1, button{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 200;
+    letter-spacing: 4px;
+}
+
+h1{
+    font-size: 6vw;
+    margin: 5% auto;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.section1{
+    width: 100%;
+    display: block;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    left: 50%;
+}
+
+button{
+    color: var(--main-redcolor);
+    background-color: var(--white-color);
+    text-decoration: none;
+    box-shadow: var(--buttonshadow);
+    cursor: pointer;
+    padding: 1.5%;
+}
+
+button:hover{
+    color: var(--white-color);
+    background-color: var(--main-redcolor);
+    font-weight: bold;
+    box-shadow:  var(--boxshadow);
+    transition: color 0.5s ease-out;
+}
+
+img{
+    max-width: 100%;}

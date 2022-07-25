@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100&display=swap');
+@import "header.css";
+@import "footer.css";
+@import "style.css";
+/*Color*/
+body{
+    --main-greycolor: #3A3D43;
+}
+
+/*Global*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: var(--white-color);
+}
+
+body {
+    background-color: var(--black-color);
+    height: 150%;
+}
+
+/*Font*/
+p{
+    font-family: 'Poppins', sans-serif;
+    text-shadow: var(--textshadow);
+    font-weight: bolder;
+    font-size: 2vmin;
+}
+h1,.columnTitle, .columnLetter, .buttonnews{
+    font-family: 'Bebas Neue', cursive;
+}
+h1,.columnTitle, .columnLetter{
+    font-weight: 200;
+    letter-spacing: 4px;
+}
+
+h1{
+    font-size: 6vmin;
+    text-transform: uppercase;
+    text-shadow: var(--textshadow);
+}
+
+#myVideo {
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
+    border-bottom: inset 1px var(--main-redcolor);
+}
+
+.BigTitle{
+    font-size: 9vmin;
+}
+
+.Redletter{
+    color:var(--main-redcolor);}
+
+.Buttonplay button{
+    position: relative;
+    top: -100px;
+    left: 90%;
+}
+.content {
+    position: absolute;
+    margin-top: -35vmin;
+    left: 10%;
+    color: var(--white-color);
+}
+
+.content p{
+    font-size: 1.5vmax;
+    margin-bottom: 5%;
+}
+.buttonnews{
+    letter-spacing: 2px;
+    font-size: 2vmin;
+    text-decoration: none;
+    color: var(--main-redcolor);
+    padding: 3% 10%;
+    background-color: var(--white-color);
+    box-shadow: var(--buttonshadow);
+
+}
+
+.buttonnews:hover{
+    color: var(--white-color);
+    background-color: var(--main-redcolor);
+    font-weight: bold;
+    box-shadow:  var(--boxshadow);
+    transition: color 0.5s ease-out;
+}
+
+
+#myBtn {
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    color: var(--white-color);
+    cursor: pointer;
+    opacity: 90%;
+    border-radius: 50%;
+    background-color: var(--black-color);
+}
+
+#myBtn:hover {
+    color: var(--black-color);
+    background-color: var(--main-greycolor);
+}
+
+/*Section2*/
+
+.section2{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 300px;
+    /*Background property*/
+    background-image: url("https://media-public.canva.com/T9xdE/MAEmGrT9xdE/1/s.png");
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position-x: 60px;
+    background-position-y: 60px;
+}
+
+/*Item section*/
+.section2 > *:nth-child(1){
+    flex: 1 1 55%;
+}
+.Left1{
+    color: var(--white-color);
+    text-align: center;
+    margin-top: 8vmax;
+}
+.Content2{
+    margin: 15%;
+
+}
+
+.section2 > *:nth-child(2){
+    flex: 1 1 45%;
+}
+/*column*/
+.column > * {
+    margin: 10%;
+    width: 330px;
+    display: flex;
+    height: fit-content;
+}
+
+.columnTitle{
+    text-transform: uppercase;
+    writing-mode: vertical-lr;
+    font-size: 5vmin;
+    margin-top: 3px;
+    color: var(--main-redcolor);
+}
+
+.columnText{
+    text-align: right;
+    font-size: 2vmin;
+}
+
+.columnLetter{
+    font-size: 30vmin;
+    margin-top: -35px;
+}
+
+.alignLeft{
+    text-align: left;
+}
+
+/*Section3*/
+.section3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 15%;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Column3Left Column3Right";
+    padding: 10%;
+    min-height: 500px;
+    border-top: inset 1px var(--main-redcolor);
+    border-bottom: inset 1px var(--main-redcolor);
+    border-radius: 21px 0px 0px 0px;
+    background: radial-gradient(circle, rgba(56,56,56,1) 0%, rgba(0,0,0,1) 98%);
+
+}
+
+.Column3Right { grid-area: Column3Right;
+    background-image: url("https://media-public.canva.com/JjqBk/MAEmGhJjqBk/1/s.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top:20%;
+}
+.Column3Right img{
+    width: 35%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Column3Left { grid-area: Column3Left;
+}
+
+.speechbuble{
+    background-color: var(--main-greycolor);
+    padding: 25px;
+    margin-bottom: 45px;
+    box-shadow:  var(--buttonshadow);
+}
+.speechbuble:nth-child(odd){
+    border-left: 7px solid var(--main-purplecolor);
+}
+
+
+
+.speechbuble:nth-child(even){
+    border-right: 7px solid var(--main-redcolor);
+
+}
+
+.speechbuble:nth-child(2n+1):after {
+    left: 20px;
+    border-width: 30px 30px 0 0;
+    bottom: -45px;
+}
+.speechbuble:nth-child(2n):after{
+    content: '';
+    margin-top: -30px;
+    padding-top: 0px;
+    position: relative;
+    bottom: -45px;
+    left: 25vmax;
+    border-width: 30px 0 0 30px;
+    border-style: solid;
+    border-color: var(--main-greycolor) transparent;
+    display: block;
+    width: 0;
+}
+
+
+.speechbuble:nth-child(2n+1):after {
+    content: '';
+    margin-top: -30px;
+    padding-top: 0px;
+    position: relative;
+    border-style: solid;
+    border-color: var(--main-greycolor) transparent;
+    display: block;
+    width: 0;
+}
+
+
+.quotes, .quoteseven{
+    content: "&#x201F";
+    font-size: xx-large;
+}
+.quotes{    color: var(--main-redcolor);}
+.quoteseven{    color: var(--main-purplecolor);}
+
+.signature{
+    color: var(--main-redcolor);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 744px) and (min-width: 475px) {
+    .Right1{
+        margin-left: 15%;
+    }
+    #myBtn{
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 744px){
+    .section3{
+        display: block;
+    }
+    .Left1{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 317px){
+    .content{
+        font-size: medium;
+    }
+    .BigTitle{
+        font-size: 6vmax;
+    }
+}
+
+@media screen and (max-width: 474px){
+    #myBtn{
+        width: 25px;
+        height: 25px;
+        font-size: 6px;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .Buttonplay button {
+        top: -50px;
+        left: 90%;
+    }
+}
+
+.footer{
+    bottom: 0;
+}
+@media screen and (max-width: 640px) and (min-width: 501px) {
+    .Buttonplay button {
+        top: -50px;
+        left: 90%;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 500px){
+     p{
+        margin-bottom: 1%;
+        font-size: 2.5vmin;
+    }
+
+    .columnText{
+        font-size: 2vmax;
+    }
+
+    .column2 p {
+        font-size: 2vmax;
+    }
+
+    .columnLetter{
+        font-size: 35vmin;
+    }
+
+    .speechbuble {
+        font-size: 2.7vmin;
+    }
+}

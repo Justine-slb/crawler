@@ -1,0 +1,292 @@
+@import "header.css";
+@import "footer.css";
+
+/* Section page title*/
+body{
+    background-color: black;
+}
+
+#Title_page {
+    margin: auto;
+    height: auto;
+    padding-bottom: 10vmax;
+    background-color: rgb(15, 15, 15);
+    flex-direction: column;
+    background-size: 100%;
+    background-image: url("../img/streams-bg.png");
+    background-repeat: repeat-y;
+}
+
+#title_news_page_box {
+    width: 100%;
+    text-align: center;
+}
+
+#logo_netflix {
+    margin-top: 7vmax;
+    margin-left: auto;
+    align-content: center;
+    width: 50vmax;
+    height: auto;
+}
+
+#Title_page p {
+    font-size: 1.7vmax;
+    color: var(--white-color);
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    font-weight: lighter;
+    text-align: center;
+    margin: -4vmax auto 0 auto;
+    padding: 0;
+}
+
+/* Section OVERVIEW*/
+#container_top_overview {
+    margin: 0;
+    height: auto;
+    padding-bottom:2rem;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    background: var(--bg-color);
+}
+
+.container_background {
+    width: 100%;
+    padding-bottom: 2rem;
+}
+
+.mega_box_overview {
+    display: flex;
+    column-gap: 2%;
+    width: 75%;
+    transition: 0.5s;
+    margin: 0 auto;
+    align-content: stretch;
+}
+
+.box_top_overview {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    width: 320px;
+    height: auto;
+    background-color: var(--white-color);
+    margin-left: 3vmax;
+    box-shadow: 0px 4px 28px 12px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 4px 28px 12px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 4px 28px 12px rgba(0,0,0,1);
+}
+
+.box_top_overview:hover {
+    transform: translateY(-4px);
+    transition: color 0.5s ease-out;
+    font-weight: bolder;
+    -webkit-box-shadow: 0px 2px 4px 4px rgba(250,250,250,0.6);
+    -moz-box-shadow: 0px 2px 4px 4px rgba(250,250,250,0.6);
+    box-shadow: 0px 2px 4px 4px rgba(250,250,250,0.6);
+}
+
+.image_container {
+    object-fit: contain;
+    width: max-content;
+    background: black;
+}
+
+.box_content_news{
+    object-fit: contain;
+}
+
+.img_new {
+    width: 100%;
+    height: auto;
+}
+
+.title_overview {
+    font-family: 'bebas neue', sans-serif;
+    color: var(--main-redcolor) ;
+    text-align: center;
+    font-size: 2.5vmax;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+}
+
+.content_news {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8vmax;
+    margin-left: 1rem; margin-right: 1rem;
+}
+
+.part_title{
+    padding : 0;
+    margin-left: 14%;
+    margin-bottom: 2vmax;
+    width: fit-content;
+}
+
+.subtitle {
+    padding: 1vmax;
+    margin-top:0;
+    margin-bottom: 0;
+    font-weight: lighter;
+    font-size: 2.3vmax;
+    color: var(--white-color);
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 4px 4px 8px rgb(0 0 0 );
+    border-bottom: solid 1px var(--white-color);
+}
+
+.box_link_news {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.box_link_news2 {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: right;
+    bottom: 0;
+    position: relative;
+}
+
+.link_news2 {
+    float: right;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease-out;
+    font-size: 1vmax;
+    color:black;
+    margin-right: 2vmax;
+    margin-bottom: 2vmax;
+    padding: 0.5vmax;
+}
+
+.link_news2:hover{
+    transition: color 0.5s ease-out;
+    background:var(--main-redcolor) ;
+    color: var(--white-color);
+    text-shadow: none;
+}
+
+@media all and (max-width: 900px) {
+    .mega_box_overview {
+        display: block;
+    }
+
+    .box_top_overview {
+        margin: 3rem auto 0 auto;
+        width: 280px;
+    }
+
+    .content_news{
+        font-size: 1.5vmax;
+    }
+    #Title_page h2{
+        margin-top: -5vmax;
+    }
+}
+
+/*blog de news*/
+#container_other_news {
+    margin: 0 auto;
+    height: auto;
+    display: block;
+    background-image: url("https://about.netflix.com/images/backgrounds/background-texture-s.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 5vmax;
+}
+
+
+.mega_box_news {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    visibility: visible;
+    object-fit: contain;
+}
+
+.news_box {
+    object-fit: contain;
+    margin: 0 auto 3rem auto;
+    width: 60%;
+    height: auto;
+    background: var(--white-color);
+    display:grid;
+    grid-template-columns: 33% 63%;
+    box-shadow: 0px 4px 28px 12px rgba(3,3,3,1);
+    -webkit-box-shadow: 0px 4px 28px 12px rgba(3,3,3,1);
+    -moz-box-shadow: 0px 4px 28px 12px rgba(3,3,3,1);
+}
+
+.news_box:hover{
+    transform: translateY(-4px);
+    -webkit-box-shadow: 0px 2px 4px 4px rgba(250,250,250,0.6);
+    -moz-box-shadow: 0px 2px 4px 4px rgba(250,250,250,0.6);
+    box-shadow: 0px 2px 4px 4px rgba(250,250,250,0.6);
+    transition: color 0.5s ease-out;
+}
+
+.content_box{
+    margin : auto 0;
+}
+
+.img_box {
+    width: 100%;
+    background: black;
+}
+
+.img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.date {
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 1vmax;
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.extract {
+    object-fit: contain;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2vmax;
+    font-weight: bold;
+    margin-left: 1rem; margin-right: 1rem;
+}
+
+
+.footer{
+    bottom: 0;
+}
+
+@media all and (max-width: 700px) {
+    .img_box {
+        display: none
+    }
+
+    .news_box {
+        display: flex;
+    }
+}
+
+@media all and (max-width: 700px) {
+.img_box {
+    display: none;
+}
+    .content_box{
+        width: 100%;
+    }
+
+    .link_news2 {
+        font-size: 2vmax;
+    } 
+}

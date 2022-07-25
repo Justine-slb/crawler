@@ -1,0 +1,195 @@
+.carousel {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+}
+
+.carousel div {
+    display: flex;
+    margin-top: 2rem;
+    position: relative;
+    background-color: var(--bg-color);
+    width: 5%;
+    height: 80%;
+    opacity: 50%;
+    box-shadow: 0 0 10px 5px rgb(0 0 0 / 70%);
+    transition: all 0.4s ease-out;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.carousel div.current{
+    height: fit-content;
+}
+
+
+.carousel div .infoBox {
+    background-color: var(--bg-color);
+    width: 100%;
+    opacity: 0;
+    top: 0%;
+    box-shadow: none;
+    transition: none;
+}
+
+.carousel div .title {
+    position: absolute;
+    color: white;
+    top: 9%;
+    margin-left: 10%;
+    bottom: unset;
+    font-size: 2vw;
+    z-index: 1;
+    font-family: 'Bebas Neue', sans-serif;
+    display: none;
+    transition: opacity 0.5s ease-out;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    padding-right: 5%;
+}
+
+.carousel div.current:hover .title {
+    display: flex;
+}
+
+/*
+.carousel div.current div.img_box_top10 img {
+    opacity: 70%;
+    width: fit-content;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    margin: unset;
+}
+*/
+.carousel div.current div.img_box_top10 {
+    margin-left: 0;
+}
+
+.carousel div div.img_box_top10 {
+    margin-left:-100%;
+    margin-top: 0;
+}
+
+.carousel div .img_box_top10{
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    opacity: initial;
+}
+
+.carousel div.current .img_box_top10 img {
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    filter: brightness(120%);
+}
+
+
+.carousel div.current .img_box_top10 .smallNumber {
+    opacity: initial;
+}
+
+.carousel div .smallNumber {
+    opacity: 1;
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    position: absolute;
+    font-size: 2.5vw;
+    bottom: 2%;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 1);
+    margin-left: 0.5vmax;
+}
+
+.carousel div a {
+    font-family: 'Bebas Neue',sans-serif;
+    color: white;
+    transition: color 0.3s ease-out;
+    z-index: 2;
+    position: absolute;
+    bottom: 0%;
+}
+
+.carousel div.current a {
+    display: initial;
+}
+
+.carousel div a:hover {
+    color: var(--main-color)
+}
+
+.carousel div.current {
+    width: 70%;
+    opacity: 1;
+    height: 100%;
+    z-index: 10;
+    transition: none;
+    cursor: initial;
+    display:grid;
+    grid-template-columns: 20% 80%;
+    top: -10%;
+}
+
+.carousel div.current .infoBox {
+    margin: 0 auto;
+    height: auto;
+    opacity: 1;
+    top: 0%;
+    box-shadow: none;
+    cursor: default;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 50%,rgba(70,70,71,0.8) 100%);
+}
+.carousel div.current .infoBox a{
+    bottom: 5%;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+
+.carousel div .infoBox .number {
+    margin-top: 2vmax;
+    margin-left: 25%;
+    opacity: 0;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12vmax;
+    text-shadow: 4px 4px var(--main-color);
+    transition: opacity 1s ease-out;
+    object-fit: contain;
+    top: 30%;
+    transform: translateY(-50%);
+    position: relative;
+}
+
+.carousel .card10 .infoBox .number {
+    transform: translate(-50%,-50%);
+    left: 20%;
+}
+
+
+.carousel div.current .infoBox .number {
+    opacity: initial;
+}
+
+@media all and (max-width: 600px){
+    .carousel div {
+        height: 60%;
+    }
+    .carousel div.current {
+        display:grid;
+        grid-template-columns: 20% 80%;
+        top: -10%;
+        height: auto;
+    }
+
+    .carousel div .infoBox .number{
+        font-size: 10vmin;
+    }
+
+    .carousel div .infoBox a{
+        font-size: 2.5vmin;
+    }
+}

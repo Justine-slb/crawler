@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Crawflix</title>
+    <meta name="description" content="This page regroup all the upcoming show coming to netflix.">
+    <meta name="keywords" content="netflix,news,shows,movies,upcoming,latest,crawflix,crawler,quitting,leaving,actualities,top 10"/>
+    <meta name="theme-color" content="#D60002"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/upComing.css">
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+</head>
+<body>
+{{> header}}
+{{> turn_back_button}}
+<section id="container_intro">
+    <div id="box_intro">
+        <div class="img_box"><img src="img/upcoming2.jpg" style="width: 100%; height: 100%;" alt="netflixMainBackground">
+       </div>
+        <div class="content">
+            <div>
+                <img src="img/logo-netflix.png" style="height: 10vmax; width: auto" alt="logoNetflix">
+                <h1 id="upcoming_title">Upcoming Shows<br></h1>
+                <p class="upcoming_subtitle">Discover all upcoming shows on Netflix plateform this month</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="container_all_upcoming">
+    <div id="upcoming_list_title">
+        <h2>
+            <span style="text-transform: uppercase; font-size: 4vmax; ">{{month}} {{year}}</span><br>
+        </h2>
+    </div>
+    <div id="upcoming_movie_container">
+        {{#each upComing}}
+            <div class="upcoming_movie_box">
+                <a href="{{link}}"><img src="{{img}}" style="width: 100%; height: AUTO" alt="movie picture"></a>
+                <p class="upcoming_date">{{date}}</p>
+            </div>
+        {{/each}}
+    </div>
+</section>
+
+{{> footer}}
+</body>
+</html>

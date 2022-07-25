@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Crawflix</title>
+    <link rel="stylesheet" href="css/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Crawflix is a site that regroup important informations about netflix. Especially actualities, upcoming shows, shows that are leaving or the current Top 10.">
+    <meta name="keywords" content="netflix,news,shows,movies,upcoming,latest,crawflix,crawler,quitting,leaving,actualities,top 10"/>
+    <meta name="theme-color" content="#D60002"/>
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+</head>
+<body>
+{{> header}}
+<section class="section1">
+    <video autoplay muted loop id="myVideo" width="100%">
+        <source src="//videos.ctfassets.net/4cd45et68cgf/ihQGzmRN3CX9KYPkzRJFt/6eea6cd4f60a23486879b2e109856c08/NETFLIX_3D_Streams_Pillars_001_5mb__2_.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    <div class="content">
+        <h1 class="BigTitle">CRAW<span class="Redletter">FLIX</span></h1>
+        <p>Welcome to our Webcrawler <br>for netflix website</p>
+        <a class = "buttonnews" href ="/News" >Enter >></a>
+    </div>
+    <div class="Buttonplay">
+        <button id="myBtn" onclick="myFunction()">I I</button>
+    </div>
+    <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "I I";
+            } else {
+                video.pause();
+                btn.innerHTML = "►";
+            }
+        }
+    </script>
+</section>
+<section class="section2">
+    <div class="Left1">
+        <div class="Content2">
+            <h1>Services & Features</h1>
+            <p>in this section you will discover what Crawflix can do for you</p>
+        </div>
+    </div>
+    <div class="Right1">
+        <div class="column">
+            <div class="column1">
+                 <p class="columnText">Found the top 10 series and films from netflix platform</p>
+                 <h5 class="columnTitle">TOP 10</h5>
+                 <h6 class="columnLetter">T</h6>
+            </div>
+            <div class="column2">
+                <h5 class="columnTitle">NEWS</h5>
+                <h6 class="columnLetter">N</h6>
+                <p>Discover all the news, about all incoming serie and movie coming soon and be the first one to knowledge</p>
+            </div>
+            <div class="column3">
+                <p class="columnText">You will be in knowledge to rewatch all you favorite serie movie before they disapear from Netflix</p>
+                <h5 class="columnTitle">Departure</h5>
+                <h6 class="columnLetter">D</h6>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="section3">
+    <div class="Column3Right">
+        <h1>How it works</h1>
+        <p>Now we are lucky to have interviewed the little crawfix robot just for you.</p>
+        <img src="./img/bot2.png" alt="Crawfix Robot">
+    </div>
+    <div class="Column3Left">
+        <p class="speechbuble"><span class="quoteseven">&#x201F</span> Can you tell us what you are and how are you working ?</p>
+        <p class="speechbuble"><span class="quotes">&#x201F</span> I am Crawflix i am a webcrawler who take all info on the internet about netflix platform and provide them to this website.<span class="signature"> - Crawfix</span></p>
+        <p class="speechbuble"><span class="quoteseven">&#x201F</span> Who creates you ?</p>
+        <p class="speechbuble"><span class="quotes">&#x201F</span>I have 3 creators, I am born from a Toulouse ynov school project who needed to create a Webcrawler<span class="signature"> - Crawfix</span></p>
+        <p class="speechbuble"><span class="quoteseven">&#x201F</span> Why Netflix?</p>
+        <p class="speechbuble"><span class="quotes">&#x201F</span>because my creators use netflix daily and don't have access to all the information that might be needed on the platform.<span class="signature"> - Crawfix</span></p>
+    </div>
+</section>
+{{> footer}}
+</body>
+</html>

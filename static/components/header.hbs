@@ -1,0 +1,28 @@
+<header>
+
+    <nav>
+        <span class="home-link">
+            <img class="logo_robot" src="img/logo.png" alt="crawflix head" style="width: 50px" >
+            <a class="logo" href = "/"><strong>CRAW<span>FLIX</span></strong></a>
+        </span>
+        <span id="checkbox">
+            <label class="toggle1" for="toggle" id="icon"> ☰ </label>
+            <input type="checkbox" id="toggle" onclick="changeByCross()" >
+            <span class ="nav-link-section">
+                    <a class = "nav-link" href ="/News" >NEWS</a>
+                    <a class = "nav-link" href ="/Top10" >TOP 10</a>
+                    <a class = "nav-link" href ="/AboutUs" >ABOUT US</a>
+            </span>
+             <script>
+        function changeByCross() {
+            if ( document.getElementById("toggle").checked){
+                document.getElementById("icon").innerHTML = "⤬";
+            } else {
+                document.getElementById("icon").innerHTML ="☰"
+            }
+        }
+    </script>
+        </span>
+    </nav>
+</header>
+

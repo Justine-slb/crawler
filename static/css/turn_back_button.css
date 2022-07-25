@@ -1,0 +1,24 @@
+#turn_back {
+    background: black;
+    position: fixed;
+    margin-top: 5vmax;
+    margin-left: 3vmax;
+    padding-left: 2vmax; padding-right: 2vmax;
+    font-size: 3vmax;
+    z-index: 14;
+    font-family:poppins, sans-serif;
+    font-weight: lighter;
+    border:none;
+    color: white;
+    text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 0px 4px 12px 4px rgba(3,3,3,0.86);
+    -webkit-box-shadow: 0px 2px 12px 4px rgba(3,3,3,0.86);
+    -moz-box-shadow: 0px 2px 12px 4px rgba(3,3,3,0.86);
+    text-align: center;
+}
+
+#turn_back:hover{
+    transition: color 0.5s ease-out;
+    background-color: var(--main-color);
+}
